@@ -1,0 +1,27 @@
+.sliderText h1{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.aboutUs{
+   background-image: url(../../assets/Bg/bg1.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+    padding: 20px 10%;
+}
+
+.serviceBox{
+    background-image: url(../../assets/Bg/bg1.png);
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: block;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+.servicesAtHome{
+    margin: 20px 10%;
+}
+

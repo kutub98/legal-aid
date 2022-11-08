@@ -4,7 +4,8 @@
     "descriptios": "Family law is an area of the law that deals with family matters & domestic relations, including adoption and surrogacy.",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/dcQFg08/FAMILY.jpg"
+    "img": "https://i.ibb.co/dcQFg08/FAMILY.jpg",
+    "seviceIcon": "https://i.ibb.co/Prc5rzj/familiy-Icon-1.png"
   },
 
   {
@@ -12,55 +13,65 @@
     "descriptios": "Business law is a section of code that is involved in protecting liberties and rights, maintaining orders, resolving disputes, and establishing standards for the business concerns and their dealings with government agencies and individuals. Every state defines its own set of regulations and laws for business organizations. Similarly, it is also the responsibility of the business concerns to know the existing rules and regulations applicable to them.",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/3STMCF9/bL.jpg"
+    "img": "https://i.ibb.co/3STMCF9/bL.jpg",
+    "seviceIcon": "https://i.ibb.co/p0kFqB2/offences.png"
   },
   {
     "serviceName": "HEALTH LAW",
     "descriptios": "For all aspects of health, there are binding rules that govern the rights and responsibilities of governments, health workers, companies, civil society and a country’s population. Together these rules make up the legal framework, or legal architecture for health. They take many forms including: statutory laws, regulatory and administrative laws, contracts, case law, and customary laws. Who is involved in making these rules, and the form they take, differs from country to country.",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/5MSbGvZ/Hl.jpg"
+    "img": "https://i.ibb.co/5MSbGvZ/Hl.jpg",
+    "seviceIcon": "https://i.ibb.co/rpXzc3x/health-law-icon-style-free-vector-removebg-preview.png"
   },
   {
     "serviceName": "CIVIL LITIGATION",
     "descriptios": "Civil litigation is a term that applies to any legal dispute where two or more parties are seeking monetary damages or a specific performance and does not include criminal accusations. Some cases go to trial in which a judge will determine the outcome, but not all will.",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/7Q5j4Sw/cl.jpg"
+    "img": "https://i.ibb.co/7Q5j4Sw/cl.jpg",
+    "seviceIcon": "https://i.ibb.co/PwGGHhr/civil-Icon.png"
   },
   {
     "serviceName": "INSURANCE LAW",
     "descriptios": "Insurance is a contract in which one party (the 'insured') pays money (called a premium) and the other party promises to reimburse the first for certain types of losses (illness, property damage, or death) if they occur. Insurance law falls into three major categories.",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/MhZqnx2/INSl.jpg"
+    "img": "https://i.ibb.co/MhZqnx2/INSl.jpg",
+    "seviceIcon": "https://i.ibb.co/ncST2qy/insurance.png"
   },
   {
     "serviceName": "SHOPLIFTING",
     "descriptios": "Shoplifting is typically defined as the unauthorized removal of merchandise from a store without paying for it. However, successfully leaving the store with unpaid merchandise is not the only way to commit a shoplifting crime. In certain cases, the intent to steal, along with an act in furtherance of that intent, can also result in criminal charges for shoplifting (or retail fraud). An act in furtherance of shoplifting ",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/b6L7X08/ShopLAW.jpg"
+    "img": "https://i.ibb.co/b6L7X08/ShopLAW.jpg",
+    "seviceIcon": "https://i.ibb.co/g7KVTxY/shoplifting.png"
   },
   {
     "serviceName": "FINANCIAL LAW",
     "descriptios": "The widespread changes occurring in financial markets around the world and in the legal and regulatory environment in which they operate has created a demand for people with expertise in both finance and financial law. This programme takes an integrated approach to these two aspects by including risk management, regulation, mergers and acquisitions, initial public offerings, formation of companies and the bank-client relation, bond issues, and loans. It relates to both national and international finance and will introduce you to how financial and legal principles are applied in practice as well as in theory",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/FW9pcKC/FINANCIAL-LAW.jpg"
+    "img": "https://i.ibb.co/FW9pcKC/FINANCIAL-LAW.jpg",
+    "seviceIcon": "https://i.ibb.co/sv478Bb/financial-Icon.png"
   },
   {
     "serviceName": "DRUG OFFECENCES",
     "descriptios": "all medicines for internal or external use of human beings or animals, and all substances intended to be used for or in the treatment, mitigation or prevention of diseases in human beings or animals, not being medicines and substances exclusively used or prepared for use in accordance with the ayurvedic, unani, homoeopathic or biochemic system of medicine",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/6PcrgL4/DRUG.jpg"
+    "img": "https://i.ibb.co/6PcrgL4/DRUG.jpg",
+    "seviceIcon": "https://i.ibb.co/2Y7sRYK/drag.png"
   },
   {
     "serviceName": "FIRE ACCIDENT",
     "descriptios": "Fire accident 'act of God' only if caused by natural force: Supreme Court. NEW DELHI: The Supreme Court has held that only those fire accidents could be termed acts of God which is inevitable and caused by external natural force and not due to active or passive negligence of human being.",
     "fees": "2000",
     "Chamber": "Chattogram Judge Court",
-    "img": "https://i.ibb.co/JR4z4XP/FIRE.jpg"
+    "img": "https://i.ibb.co/JR4z4XP/FIRE.jpg",
+    "seviceIcon": "https://i.ibb.co/5hsW2Js/Accident.png"
   }
 ]
+
+

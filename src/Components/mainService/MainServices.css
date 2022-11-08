@@ -1,0 +1,14 @@
+.servicesSections {
+  background-image: url(../../assets/Bg/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 10%;
+  position: relative;
+  height: 180px;
+}
+
+.text{
+    position: absolute;
+    top: 64px;
+}

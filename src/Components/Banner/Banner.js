@@ -33,7 +33,7 @@ const Banner = () => {
     });
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5001/services")
+    fetch("https://legal-aid-server.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

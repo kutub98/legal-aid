@@ -16,7 +16,7 @@ const DetailsMore = () => {
   const [reviews, setReviews] =useState([])
  
   useEffect(()=>{
-    fetch('http://localhost:5001/allReviews')
+    fetch('https://legal-aid-server.vercel.app/allReviews')
     .then(res => res.json())
     .then(data => setReviews(data))
   },[])
@@ -56,7 +56,7 @@ const DetailsMore = () => {
       serviceName,
     };
 
-    fetch("http://localhost:5001/allReviews", {
+    fetch("https://legal-aid-server.vercel.app/allReviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

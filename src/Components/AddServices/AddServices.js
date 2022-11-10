@@ -22,7 +22,7 @@ const AddServices = () => {
       fees,
     };
 
-    fetch("http://localhost:5001/services", {
+    fetch("https://legal-aid-server.vercel.app/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",

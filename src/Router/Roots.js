@@ -26,12 +26,12 @@ const Roots = () => {
         {
           path: "services",
           element: <PrivateRoute><MainService></MainService></PrivateRoute>,
-          loader: () => fetch("http://localhost:5001/services"),
+          loader: () => fetch("https://legal-aid-server.vercel.app/services"),
         },
         {
           path: "/services/:_id",
           element: <PrivateRoute><DetailsMore></DetailsMore></PrivateRoute>,
-          loader: ({ params }) => fetch(`http://localhost:5001/services/${params._id}`),
+          loader: ({ params }) => fetch(`https://legal-aid-server.vercel.app/services/${params._id}`),
         },
         {path: 'addServices', element: <AddServices></AddServices>},
         {path: 'AllReviews', element: <AllReviews></AllReviews>}

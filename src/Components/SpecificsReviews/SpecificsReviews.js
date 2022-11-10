@@ -8,7 +8,7 @@ const SpecificsReviews = ({specific}) => {
     const [rev , setReviews] =useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5001/allReviews')
+        fetch('https://legal-aid-server.vercel.app/allReviews')
         .then(res => res.json())
         .then(data => setReviews(data))
       },[rev])

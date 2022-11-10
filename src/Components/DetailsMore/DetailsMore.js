@@ -5,6 +5,9 @@ import "react-photo-view/dist/react-photo-view.css";
 import { AuthContext } from "../UserContext/UserContext";
 import Swal from "sweetalert2";
 import SpecificsReviews from "../SpecificsReviews/SpecificsReviews";
+import './Details.css'
+
+
 
 const DetailsMore = () => {
   const details = useLoaderData();
@@ -86,7 +89,7 @@ const DetailsMore = () => {
           <div className="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
             <div className="flex flex-col justify-center flex-1 p-6 bg-gray-50">
               <span className="text-xs uppercase text-gray-600">Help for {serviceName}</span>
-              <h3 className="text-6xl font-bold">{serviceName}</h3>
+              <h3 className="text-6xl servName font-bold">{serviceName}</h3>
               <p className="my-6 text-gray-600">{descriptios}</p>
               <p className="text-red-700 text-lg font-bold">Chamber: {Chamber}</p>
               <p className="text-red-700 text-lg font-bold">Fees: {fees} Tk only</p>
@@ -106,8 +109,8 @@ const DetailsMore = () => {
       </section>
       <section className="">
         <div className="reviewSection my-5 mx-[10%]">
-          <div className="reviews flex justify-between">
-            <h1 className="bg-yellow-800 p-3 border rounded text-white">Users Review</h1>
+          <div className="reviews flex justify-between ">
+            <h1 className="bg-yellow-800 p-2 border rounded text-white">Users Review</h1>
             {/* The button to open modal */}
             <label htmlFor="my-modal-3" className="btn">
               Add A Review

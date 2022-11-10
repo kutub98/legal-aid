@@ -2,9 +2,12 @@ import React from "react";
 import logo from '../../assets/logo/logo192.png'
 import logo2 from '../../assets/logo/bigLogo.png'
 import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
+    
     <div>
+      
       <footer className="px-4 divide-y bg-gray-100 text-gray-800 px-[10%]">
         <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">

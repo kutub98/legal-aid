@@ -11,16 +11,17 @@ const DetailsMore = () => {
   const { _id, img, serviceName, descriptios, Chamber, seviceIcon, fees } = details;
   const { user } = useContext(AuthContext);
   const [reviews, setReviews] =useState([])
-
+ 
   useEffect(()=>{
     fetch('http://localhost:5001/allReviews')
     .then(res => res.json())
     .then(data => setReviews(data))
   },[])
 
-  const Specifics = reviews.find(review => review.serviceName === details.serviceName)
+  const Specifics = reviews.filter(review => review.serviceName === details.serviceName)
+
 // const SpecificsReviews = [{myReview: Specifics}]
-console.log(Specifics)
+
 
 
 
@@ -196,9 +197,9 @@ console.log(Specifics)
               </div>
             </div>
           </div>
-          {/* {
-            {[Specifics]}.map(specific => <SpecificsReviews key={specific._id} specific={specific}></SpecificsReviews>)
-          } */}
+          {
+            Specifics.map(specific => <SpecificsReviews key={specific._id} specific={specific}></SpecificsReviews>)
+          }
         </div>
       </section>
     </div>

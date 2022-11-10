@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../UserContext/UserContext';
 
-const SpecificsReviews = (specific) => { 
+const SpecificsReviews = ({specific}) => { 
+    const {user} = useContext(AuthContext);
+    console.log(specific)
     const { Name, email,PhotoUrl,Ratings,Message,serviceName } = specific;
+    const [rev , setReviews] =useState([])
+
+    useEffect(()=>{
+        fetch('http://localhost:5001/allReviews')
+        .then(res => res.json())
+        .then(data => setReviews(data))
+      },[rev])
     return (
         <div>
             <div className="container flex flex-col w-full p-6  rounded-md divide-gray-300 bg-gray-50 text-gray-800">
@@ -9,16 +19,17 @@ const SpecificsReviews = (specific) => {
               <div className=" space-x-4 flex ">
                 <div>
                   <img
-                    src="https://source.unsplash.com/100x100/?portrait"
+                    src={user?.PhotoUrl}
                     alt=""
                     className="object-cover w-12 h-12 rounded-full bg-gray-500"
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">Leroy Jenkins</h4>
+                  <h4 className="font-bold">{user?.displayName} reviewd for {specific.serviceName}</h4>
                 </div>
               </div>
               <div className="rating rating-sm">
+                <span>{specific.Ratings}</span>
                 <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
                 <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" checked />
                 <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
@@ -28,12 +39,10 @@ const SpecificsReviews = (specific) => {
             </div>
             <div className="p-4 space-y-2 text-sm text-gray-600">
               <p>
-                Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu dictum lectus consequat vitae. Etiam ut
-                dolor id justo fringilla finibus.
+               {specific.Message}
               </p>
               <p>
-                Donec eget ultricies diam, eu molestie arcu. Etiam nec lacus eu mauris cursus venenatis. Maecenas
-                gravida urna vitae accumsan feugiat. Vestibulum commodo, ante sit urna purus rutrum sem.
+               {specific.Message}
               </p>
             </div>
           </div>

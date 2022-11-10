@@ -9,12 +9,14 @@ import Home from "../Components/Home/Home";
 import DetailsMore from "../Components/DetailsMore/DetailsMore";
 import AddServices from "../Components/AddServices/AddServices";
 import AllReviews from "../Components/AllReviews/AllReviews";
+import PrivateRoute from "../Components/Private/PrivateRoute/PrivateRoute";
 
 const Roots = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Main></Main>,
+      element: <Main></Main>},
+      {path: '/', element:<Main></Main>,
       children: [
         { path: "home", element: <Home></Home> },
         { path: "Blog", element: <Blog></Blog> },
@@ -22,18 +24,18 @@ const Roots = () => {
         { path: "Register", element: <Register></Register> },
         {
           path: "services",
-          element: <MainService></MainService>,
+          element: <PrivateRoute><MainService></MainService></PrivateRoute>,
           loader: () => fetch("http://localhost:5001/services"),
         },
         {
           path: "/services/:_id",
-          element: <DetailsMore></DetailsMore>,
+          element: <PrivateRoute><DetailsMore></DetailsMore></PrivateRoute>,
           loader: ({ params }) => fetch(`http://localhost:5001/services/${params._id}`),
         },
         {path: 'addServices', element: <AddServices></AddServices>},
         {path: 'AllReviews', element: <AllReviews></AllReviews>}
       ],
-    },
+    }
   ]);
   return (
     <div>

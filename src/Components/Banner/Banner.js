@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   const container = useRef(null);
   const [allServices, setServices] = useState([]);
+  // const sorted = allServices.sort((a, b) => b-a)
+  // const sorted = allServices.sort((a, b) => (a > b ? -1 : 1))
+  const sortedAllServices = allServices.sort().reverse()
 
   useEffect(() => {
     Lottie.loadAnimation({
@@ -164,7 +167,7 @@ const Banner = () => {
       <div className="serviceBox justify-center block items-end">
       <h1 className="text-center text-3xl font-bold my-5">Our Service</h1>
         <div className="servicesAtHome grid lg:grid-cols-3 grid-cols-1 gap-6">
-          {allServices.slice(0, 3).map((sService) => (
+          {sortedAllServices.slice(0, 3).map((sService) => (
             <SingleServices key={sService._id} allService={sService}></SingleServices>
           ))}
         </div>

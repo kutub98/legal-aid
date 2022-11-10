@@ -1,20 +1,73 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
+import { AuthContext } from "../UserContext/UserContext";
+import Swal from "sweetalert2";
+import SpecificsReviews from "../SpecificsReviews/SpecificsReviews";
 
 const DetailsMore = () => {
-  const details = useLoaderData();const { _id, img, serviceName, descriptios, Chamber, seviceIcon, fees } = details;
+  const details = useLoaderData();
+  const { _id, img, serviceName, descriptios, Chamber, seviceIcon, fees } = details;
+  const { user } = useContext(AuthContext);
+  const [reviews, setReviews] =useState([])
+
+  useEffect(()=>{
+    fetch('http://localhost:5001/allReviews')
+    .then(res => res.json())
+    .then(data => setReviews(data))
+  },[])
+
+  const specificService = reviews.find(review => review.serviceName === details.serviceName)
+console.log(specificService)
 
 
-// handleForReview 
 
-const handleForReview =(e)=>{
-    e.preventDefault()
-    console.log('added review')
-}
+  // handleForReview
+  const handleForReview = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const Name = form.Name.value;
+    const email = form.email.value;
+    const PhotoUrl = form.PhotoUrl.value;
+    const Ratings = form.Ratings.value;
+    const Message = form.Message.value;
+    // console.log( Name, email, PhotoUrl, Ratings, Message)
 
+    const reviewDetails = {
+      Name,
+      email,
+      PhotoUrl,
+      Ratings,
+      Message,
+      serviceName,
+    };
 
+    fetch("http://localhost:5001/allReviews", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(reviewDetails),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          e.target.reset()
+        }else{
+
+        }
+        console.log(data);
+       
+      });
+  };
 
   return (
     <div className="">
@@ -66,7 +119,21 @@ const handleForReview =(e)=>{
                       type="text"
                       name="Name"
                       id="name"
+                      defaultValue={user?.displayName}
                       placeholder="Name"
+                      className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
+                    />
+                  </div>
+                  <div className="space-y-1 my-4">
+                    <label for="username" className="block text-gray-600">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="name"
+                      defaultValue={user?.email}
+                      placeholder="email"
                       className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
                     />
                   </div>
@@ -78,7 +145,20 @@ const handleForReview =(e)=>{
                       type="text"
                       name="PhotoUrl"
                       id="PhotoUrl"
+                      defaultValue={user?.photoURL}
                       placeholder="PhotoUrl"
+                      className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
+                    />
+                  </div>
+                  <div className="space-y-1 my-4">
+                    <label for="PhotoUrl" className="block text-gray-600">
+                      Ratings Point
+                    </label>
+                    <input
+                      type="text"
+                      name="Ratings"
+                      id="Rating"
+                      placeholder="Ratings"
                       className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
                     />
                   </div>
@@ -86,7 +166,8 @@ const handleForReview =(e)=>{
                     <label htmlFor="Message">Message</label>
                     <textarea
                       id="Message"
-                      placeholder=""
+                      name="Message"
+                      placeholder="Write your Review "
                       className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-pink-600 border-gray-300 text-gray-900"
                     ></textarea>
                   </div>
@@ -98,45 +179,17 @@ const handleForReview =(e)=>{
                     <input type="radio" name="rating-6" className="mask mask-star-2 bg-yellow-800" />
                   </div>
                   <div>
-                  <button type="submit" className="w-full bg-yellow-800 text-white py-4 px-5 rounded">Submit a Review</button>
+                    <button type="submit" className="w-full bg-yellow-800 text-white py-4 px-5 rounded">
+                      Submit a Review
+                    </button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-          <div className="container flex flex-col w-full p-6  rounded-md divide-gray-300 bg-gray-50 text-gray-800">
-            <div className="flex justify-between  p-4">
-              <div className=" space-x-4 flex ">
-                <div>
-                  <img
-                    src="https://source.unsplash.com/100x100/?portrait"
-                    alt=""
-                    className="object-cover w-12 h-12 rounded-full bg-gray-500"
-                  />
-                </div>
-                <div>
-                  <h4 className="font-bold">Leroy Jenkins</h4>
-                </div>
-              </div>
-              <div className="rating rating-sm">
-                <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" checked />
-                <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-              </div>
-            </div>
-            <div className="p-4 space-y-2 text-sm text-gray-600">
-              <p>
-                Vivamus sit amet turpis leo. Praesent varius eleifend elit, eu dictum lectus consequat vitae. Etiam ut
-                dolor id justo fringilla finibus.
-              </p>
-              <p>
-                Donec eget ultricies diam, eu molestie arcu. Etiam nec lacus eu mauris cursus venenatis. Maecenas
-                gravida urna vitae accumsan feugiat. Vestibulum commodo, ante sit urna purus rutrum sem.
-              </p>
-            </div>
-          </div>
+          {
+            specificService.map(specific => <SpecificsReviews key={specific._id} specific={specific}></SpecificsReviews>)
+          }
         </div>
       </section>
     </div>

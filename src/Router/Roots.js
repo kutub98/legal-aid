@@ -7,6 +7,8 @@ import MainService from "../Components/mainService/MainService";
 import Register from "../Components/Register/Register";
 import Home from "../Components/Home/Home";
 import DetailsMore from "../Components/DetailsMore/DetailsMore";
+import AddServices from "../Components/AddServices/AddServices";
+import AllReviews from "../Components/AllReviews/AllReviews";
 
 const Roots = () => {
   const router = createBrowserRouter([
@@ -28,6 +30,8 @@ const Roots = () => {
           element: <DetailsMore></DetailsMore>,
           loader: ({ params }) => fetch(`http://localhost:5001/services/${params._id}`),
         },
+        {path: 'addServices', element: <AddServices></AddServices>},
+        {path: 'AllReviews', element: <AllReviews></AllReviews>}
       ],
     },
   ]);

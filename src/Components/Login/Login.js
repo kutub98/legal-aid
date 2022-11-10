@@ -1,7 +1,7 @@
 import { GoogleAuthProvider } from "firebase/auth";
 import Lottie from "lottie-web";
 import React, { useContext, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../UserContext/UserContext";
 import "./Login.css";
@@ -11,6 +11,10 @@ console.log(user)
 
 
 
+const navigate = useNavigate();
+const location = useLocation(); 
+const from = location.state?.from?.pathname || '/'
+
 // loginWithEpHandling 
 const loginWithEpHandling =(e)=>{
     e.preventDefault()
@@ -18,7 +22,8 @@ const loginWithEpHandling =(e)=>{
     const email = form.email.value;
     const password = form.password.value;
     // console.log(email, password)
-
+    form.reset();
+    navigate(from, {replace: true})
     // login with email and password
     LoginWithEp(email, password)
     .then(res => {
@@ -31,6 +36,8 @@ const loginWithEpHandling =(e)=>{
             showConfirmButton: false,
             timer: 1500
           })
+          form.reset();
+          navigate(from, {replace: true})
     })
     .catch( error => {
         const errorMessage = error.message;
@@ -50,6 +57,8 @@ const GoogleHandler =()=>{
     .then(res => {
         const user = res.user;
         console.log(user)
+        
+        navigate(from, {replace: true})
     })
     .catch(error =>{
          const errorMessage = error.message;
@@ -63,6 +72,8 @@ const GitHubHandler = ()=> {
     .then(res => {
         const user = res.user;
         console.log(user)
+      
+        navigate(from, {replace: true})
     })
     .catch(error =>{
          const errorMessage = error.message;

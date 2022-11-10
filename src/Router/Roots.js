@@ -10,6 +10,7 @@ import DetailsMore from "../Components/DetailsMore/DetailsMore";
 import AddServices from "../Components/AddServices/AddServices";
 import AllReviews from "../Components/AllReviews/AllReviews";
 import PrivateRoute from "../Components/Private/PrivateRoute/PrivateRoute";
+import Error from "../Components/Error/Error";
 
 const Roots = () => {
   const router = createBrowserRouter([
@@ -35,7 +36,9 @@ const Roots = () => {
         {path: 'addServices', element: <AddServices></AddServices>},
         {path: 'AllReviews', element: <AllReviews></AllReviews>}
       ],
-    }
+     
+    },
+    {path: "*", element: <Error></Error>}
   ]);
   return (
     <div>

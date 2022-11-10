@@ -60,7 +60,7 @@ const Header = () => {
                     <Link to="addServices">Add Service</Link>
                   </li>
                   <li>
-                    <Link to="AllReviews">Add Review</Link>
+                    <Link to="AllReviews">All Review</Link>
                   </li>
                   
                   

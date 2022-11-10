@@ -18,8 +18,17 @@ const DetailsMore = () => {
     .then(data => setReviews(data))
   },[])
 
-  const specificService = reviews.find(review => review.serviceName === details.serviceName)
-console.log(specificService)
+  const Specifics = reviews.find(review => review.serviceName === details.serviceName)
+// const SpecificsReviews = [{myReview: Specifics}]
+console.log(Specifics)
+
+
+
+
+
+
+// console.log(propertyValues);
+
 
 
 
@@ -187,9 +196,9 @@ console.log(specificService)
               </div>
             </div>
           </div>
-          {
-            specificService.map(specific => <SpecificsReviews key={specific._id} specific={specific}></SpecificsReviews>)
-          }
+          {/* {
+            {[Specifics]}.map(specific => <SpecificsReviews key={specific._id} specific={specific}></SpecificsReviews>)
+          } */}
         </div>
       </section>
     </div>

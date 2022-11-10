@@ -9,16 +9,28 @@ const AllReviews = () => {
       .then(data => setAllRev(data));
   }, []);
   console.log(allRev);
-  const entries = Object.entries(allRev);
-
-console.log(entries);
-
 
   return (
     <div>
-      {
-        entries.map(rev => <SingleReviews key={rev._id} rev={rev}></SingleReviews>)
-      }
+      <div className="overflow-x-auto w-full">
+        <table className="table w-full">
+          <thead>
+            <tr>
+              <th>SL</th>
+              <th>Actions</th>
+              <th>Service name & img</th>
+              <th>User Name</th>
+              <th>User Email</th>
+              <th>User Message</th>
+              <th>Ratings</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {allRev.map(rev => <SingleReviews key={rev._id} rev={rev}></SingleReviews>)}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

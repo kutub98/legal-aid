@@ -65,7 +65,7 @@ const Header = () => {
                   
                   
                   <li onClick={Profile} className="relative">
-                    <Link>Profile</Link>
+                    <Link>Dashboard</Link>
                     <div className="hidden absolute  w-56 top-14 right-2 z-50" id="profile">
                         <div onClick={remove}>
                         <button className=" justify-end " id="hide"><BiXCircle className="w-6 h-6"/></button>

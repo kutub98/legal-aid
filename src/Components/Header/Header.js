@@ -20,15 +20,15 @@ const Header = () => {
     logOut(auth) 
  }
 
- const Profile = ()=>{
-    const profileDashBoard = document.getElementById('profile')
-    profileDashBoard.style.display ="block"
- }
+//  const Profile = ()=>{
+//     const profileDashBoard = document.getElementById('profile')
+//     profileDashBoard.style.display ="block"
+//  }
 
- const remove = ()=>{
-    const profileDashBoard = document.getElementById('profile')
-    profileDashBoard.style.display ="hidden"
- }
+//  const remove = ()=>{
+//     const profileDashBoard = document.getElementById('profile')
+//     profileDashBoard.style.display ="hidden"
+//  }
 
   return (
     <div>
@@ -43,7 +43,7 @@ const Header = () => {
         </div>
         <div className="menubar">
           {openMenu ? (
-            <ul className="bigDisplay hidden">
+            <ul className="bigDisplay hidden items-center ">
               <li>
                 <Link to="/home">Home</Link>
               </li>
@@ -62,9 +62,11 @@ const Header = () => {
                   <li>
                     <Link to="AllReviews">All Review</Link>
                   </li>
+                  <li className="bg-black text-white p-2">
+                  <Link to='/' onClick={logOutHandler} className="flex items-center"><BiLogOut className=" ml-2 "/> <span>Logout</span></Link>
+                  </li>
                   
-                  
-                  <li onClick={Profile} className="relative">
+                  {/* <li onClick={Profile} className="relative">
                     <Link>Dashboard</Link>
                     <div className="hidden absolute  w-56 top-14 right-2 z-50" id="profile">
                         <div onClick={remove}>
@@ -90,16 +92,16 @@ const Header = () => {
 
                         </div>
                     </div>
-                  </li>
+                  </li> */}
                   
                 </>
               ) : (
                 <>
-                  <li>
+                  <li  className="bg-red-700 text-white p-2">
                     {" "}
-                    <Link to="/login">login</Link>
+                    <Link to="/login">Login</Link>
                   </li>
-                  <li>
+                  <li className="bg-black text-white p-2">
                     {" "}
                     <Link to="/Register">Register</Link>
                   </li>

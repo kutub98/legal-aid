@@ -132,6 +132,7 @@ const DetailsMore = () => {
                       type="text"
                       name="Name"
                       id="name"
+                      required
                       defaultValue={user?.displayName}
                       placeholder="Name"
                       className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
@@ -145,6 +146,7 @@ const DetailsMore = () => {
                       type="email"
                       name="email"
                       id="name"
+                      required
                       defaultValue={user?.email}
                       placeholder="email"
                       className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
@@ -158,6 +160,7 @@ const DetailsMore = () => {
                       type="text"
                       name="PhotoUrl"
                       id="PhotoUrl"
+                      required
                       defaultValue={user?.photoURL}
                       placeholder="PhotoUrl"
                       className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
@@ -171,6 +174,7 @@ const DetailsMore = () => {
                       type="text"
                       name="Ratings"
                       id="Rating"
+                      required
                       placeholder="Ratings"
                       className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-50 text-gray-800 focus:border-pink-600"
                     />
@@ -180,6 +184,7 @@ const DetailsMore = () => {
                     <textarea
                       id="Message"
                       name="Message"
+                      required
                       placeholder="Write your Review "
                       className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-pink-600 border-gray-300 text-gray-900"
                     ></textarea>

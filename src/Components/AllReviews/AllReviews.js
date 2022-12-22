@@ -11,7 +11,7 @@ const AllReviews = () => {
   console.log(allRev);
 
   return (
-    <div>
+    <div className="px-[8%]">
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <thead>
@@ -27,7 +27,7 @@ const AllReviews = () => {
             </tr>
           </thead>
           <tbody>
-            {allRev.map(rev => <SingleReviews key={rev._id} rev={rev}></SingleReviews>)}
+            {allRev.map((rev, idx) => <SingleReviews key={rev._id} idx= {idx} rev={rev}></SingleReviews>)}
           </tbody>
         </table>
       </div>

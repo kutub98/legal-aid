@@ -22,7 +22,7 @@ const MainServiceSingle = ({ mainSERVICE }) => {
             </a>
             <p className="leading-snug text-gray-600">{descriptios.slice(0, 100) + "...."}</p>
           </div>
-          <button className="w-full py-5 px-6 rounded-md bg-orange-800 text-white">
+          <button className="w-full py-3 px-6 rounded-md bg-orange-800 text-white">
           <Link to={`/services/${_id}`}>More Details</Link>
           </button>
 

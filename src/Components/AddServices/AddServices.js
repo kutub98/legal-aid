@@ -48,7 +48,7 @@ const AddServices = () => {
 
   return (
     <div className="">
-      <section className="p-6 bg-gray-100 text-gray-900 justify-center">
+      <section className="p-6 bg-white text-gray-900 justify-center py-2 px-[8%]">
         <form
           onSubmit={handleForAddService}
           className="container  ng-untouched ng-pristine ng-valid grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 "
@@ -61,8 +61,9 @@ const AddServices = () => {
                 type="text"
                 name="img"
                 id="img"
+                required 
                 placeholder="Image Url for Image"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+                className="w-full px-3 py-3 shadow-stone-600 border rounded-md  border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>
             <div>
@@ -73,8 +74,9 @@ const AddServices = () => {
                 type="text"
                 name="serviceName"
                 id="serviceName"
+                required 
                 placeholder="Service Name"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+                className="w-full px-3 py-3 shadow-stone-600 border rounded-md  border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>
             <div>
@@ -85,8 +87,9 @@ const AddServices = () => {
                 type="text"
                 name="descriptios"
                 id="descriptios"
+                required 
                 placeholder="Descriptions"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+                className="w-full px-3 py-3 shadow-stone-600 border rounded-md  border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>
             <div>
@@ -97,8 +100,9 @@ const AddServices = () => {
                 type="text"
                 name="Chamber"
                 id="Chamber"
+                required 
                 placeholder="Chamber"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+                className="w-full px-3 py-3 shadow-stone-600 border rounded-md  border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>
             <div>
@@ -109,8 +113,9 @@ const AddServices = () => {
                 type="text"
                 name="seviceIcon"
                 id="seviceIcon"
+                required 
                 placeholder="Image url for For serviceIcon"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+                className="w-full px-3 py-3 shadow-stone-600 border rounded-md  border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>
             <div>
@@ -121,11 +126,12 @@ const AddServices = () => {
                 type="text"
                 name="fees"
                 id="Fees"
+                required 
                 placeholder="Fees"
-                className="w-full px-3 py-2 border rounded-md border-gray-300 bg-gray-50 text-gray-800"
+                className="w-full px-3 py-3 shadow-stone-600 border rounded-md  border-gray-300 bg-gray-50 text-gray-800"
               />
             </div>
-          <button type="submit" className=" text-center justify-center bg-yellow-700 py-2 text-white font-bold">Add a New Service</button>
+          <button type="submit" className=" w-full  text-center justify-center bg-yellow-700 py-3 rounded-md text-white font-bold">Add a New Service</button>
         </form>
       </section>
     </div>

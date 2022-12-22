@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BsFillTrashFill } from "react-icons/bs";
-const SingleReviews = ({ review }) => {
+const SingleReviews = ({ review, idx }) => {
   let count = 1;
 
   return (
     <tr>
-      <th>{count++}</th>
+      <th>{idx + 1}</th>
       <th className=" p-2">
         <button value="" className="bg-yellow-700 p-2 text-white mx-3">
           Edit

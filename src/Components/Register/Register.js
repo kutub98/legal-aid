@@ -86,6 +86,7 @@ const Register = () => {
               <input
                 type="text"
                 name="Name"
+                required
                 id="name"
                 placeholder="name"
                 className="w-full px-4 py-3 rounded-md border-gray-300 bg-white- text-gray-800 focus:border-pink-600"
@@ -98,6 +99,7 @@ const Register = () => {
               <input
                 type="text"
                 name="PhotoUrl"
+                required
                 id="PhotoUrl"
                 placeholder="PhotoUrl"
                 className="w-full px-4 py-3 rounded-md border-gray-300 bg-white- text-gray-800 focus:border-pink-600"
@@ -111,6 +113,7 @@ const Register = () => {
                 <input
                   type="email"
                   name="Email"
+                  required
                   id="email"
                   placeholder="email"
                   className="w-full px-4 py-3 rounded-md border-gray-300 bg-white- text-gray-800 focus:border-pink-600"
@@ -123,6 +126,7 @@ const Register = () => {
                 <input
                   type="password"
                   name="Password"
+                  required
                   id="Password"
                   placeholder="Password"
                   className="w-full px-4 py-3 rounded-md border-gray-300 bg-white- text-gray-800 focus:border-pink-600"
@@ -134,6 +138,7 @@ const Register = () => {
               <input
                 type="password"
                 name="ConfirmPassword"
+                required
                 id="ConfirmPassword"
                 placeholder="ConfirmPassword"
                 className="w-full px-4 py-3 rounded-md border-gray-700 bg-white text-gray-800 focus:border-pink-600"

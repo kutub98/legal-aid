@@ -41,11 +41,13 @@ const loginWithEpHandling =(e)=>{
     })
     .catch( error => {
         const errorMessage = error.message;
+        
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: errorMessage,
           })
+          navigate('/login')
     })
 
     

@@ -1,39 +1,45 @@
-.sliderText h1{
-    font-size: 40px;
-    font-weight: 800;
+.sliderText h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.aboutUs {
+  background-image: url(../../assets/Bg/bg1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 10%;
+}
+
+.serviceBox {
+  background-image: url(../../assets/Bg/bg1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.servicesAtHome {
+  margin: 20px 10%;
 }
 
 @media screen and (min-width: 200px) and (max-width: 650px) {
-    .sliderText{
-        display: none;
-    }
+  .sliderText {
+    display: none;
+  }
 }
 @media screen and (min-width: 651px) and (max-width: 850px) {
-    .sliderText h1{
-        font-size: 30px;
+  .sliderText h1 {
+    font-size: 30px;
     font-weight: 600;
-    }
+  }
 }
 
-.aboutUs{
-   background-image: url(../../assets/Bg/bg1.png);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-    padding: 20px 10%;
+@media screen and (min-width: 200px) and (max-width: 780px) {
+  .sliderText h1 {
+    font-size: 20px;
+    font-weight: 800;
+  }
 }
-
-.serviceBox{
-    background-image: url(../../assets/Bg/bg1.png);
-    background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   display: block;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-}
-.servicesAtHome{
-    margin: 20px 10%;
-}
-

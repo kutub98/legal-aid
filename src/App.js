@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import Roots from './Router/Roots';
 import LayOut from './Components/LayOut/LayOut';
 
 function App() {

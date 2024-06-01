@@ -1,8 +1,9 @@
-import React from "react";
-import "./SingleService.css";
+import React from 'react';
+import './SingleService.css';
 
 const SingleServices = ({ allService }) => {
-  const { _id, img, serviceName, descriptios, Chamber, seviceIcon } = allService;
+  const { _id, img, serviceName, descriptios, Chamber, seviceIcon } =
+    allService;
   return (
     <div className="py-6">
       <div className=" p-4 text-justify rounded-md shadow-md bg-gray-50 text-gray-900">

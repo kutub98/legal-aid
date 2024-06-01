@@ -1,34 +1,24 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../assets/logo/logo192.png";
-import logo2 from "../../assets/logo/bigLogo.png";
-import { FaBars, FaWindowClose } from "react-icons/fa";
-import "./Header.css";
-import { AuthContext } from "../UserContext/UserContext";
-import { BiUserCircle ,BiLogOut, BiXCircle } from "react-icons/bi";
-
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logo/logo192.png';
+import logo2 from '../../assets/logo/bigLogo.png';
+import { FaBars, FaWindowClose } from 'react-icons/fa';
+import './Header.css';
+import { AuthContext } from '../UserContext/UserContext';
+import { BiLogOut } from 'react-icons/bi';
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(true);
   const { auth, user, logOut } = useContext(AuthContext);
-  console.log(user, logOut);
-  const [openProfile, setOpenProfile] = useState()
-
 
   // logOut Handler ===========
-  const logOutHandler =()=>{
-    logOut(auth) 
- }
+  const logOutHandler = () => {
+    logOut(auth);
+  };
 
-//  const Profile = ()=>{
-//     const profileDashBoard = document.getElementById('profile')
-//     profileDashBoard.style.display ="block"
-//  }
-
-//  const remove = ()=>{
-//     const profileDashBoard = document.getElementById('profile')
-//     profileDashBoard.style.display ="hidden"
-//  }
+  const handleOnClick = () => {
+    setOpenMenu(true);
+  };
 
   return (
     <div>
@@ -44,65 +34,42 @@ const Header = () => {
         <div className="menubar">
           {openMenu ? (
             <ul className="bigDisplay hidden items-center ">
-              <li>
+              <li onClick={handleOnClick}>
                 <Link to="/home">Home</Link>
               </li>
-              <li>
-                {" "}
+              <li onClick={handleOnClick}>
+                {' '}
                 <Link to="/Blog">Blog</Link>
               </li>
-              <li>
+              <li onClick={handleOnClick}>
                 <Link to="/Services">Services</Link>
               </li>
               {user?.uid ? (
                 <>
-                  <li>
+                  <li onClick={handleOnClick}>
                     <Link to="addServices">Add Service</Link>
                   </li>
-                  <li>
+                  <li onClick={handleOnClick}>
                     <Link to="AllReviews">All Review</Link>
                   </li>
-                  <li className="bg-black text-white p-2">
-                  <Link to='/' onClick={logOutHandler} className="flex items-center"><BiLogOut className=" ml-2 "/> <span>Logout</span></Link>
+                  <li className="bg-black items-center text-white p-2 items-center ">
+                    <Link
+                      to="/"
+                      onClick={logOutHandler}
+                      className="flex items-center"
+                    >
+                      <BiLogOut className=" mr-3 " /> <span>Logout</span>
+                    </Link>
                   </li>
-                  
-                  {/* <li onClick={Profile} className="relative">
-                    <Link>Dashboard</Link>
-                    <div className="hidden absolute  w-56 top-14 right-2 z-50" id="profile">
-                        <div onClick={remove}>
-                        <button className=" justify-end " id="hide"><BiXCircle className="w-6 h-6"/></button>
-                        </div>
-                        <div className=" py-2 px-3 h-full p-3 space-y-2 w-60 bg-gray-100 text-gray-800 ">
-                            <div className="profileAndDetails flex items-center">
-                               { user?.uid ?
-                                <img src={user?.photoUrl} alt="" className="w-12 h-12 rounded-full bg-gray-500"  />:
-                                <img src="https://source.unsplash.com/100x100/?portrait" alt="" className="w-12 h-12 rounded-full bg-gray-500" />
-
-                               }
-                               { user?.uid ?
-                                <h1>{user?.displayName}</h1>: "User"
-
-                               }
-                            </div>
-                            <div>
-                            <Link to='/' className="flex items-center"> <BiUserCircle className=" ml-2 "/> <span>View Profile</span></Link>
-                            
-                            <Link to='/' onClick={logOutHandler} className="flex items-center"><BiLogOut className=" ml-2 "/> <span>Logout</span></Link>
-                            </div>
-
-                        </div>
-                    </div>
-                  </li> */}
-                  
                 </>
               ) : (
                 <>
-                  <li  className="bg-red-700 text-white p-2">
-                    {" "}
+                  <li className="bg-red-700 text-white p-2">
+                    {' '}
                     <Link to="/login">Login</Link>
                   </li>
                   <li className="bg-black text-white p-2">
-                    {" "}
+                    {' '}
                     <Link to="/Register">Register</Link>
                   </li>
                 </>
@@ -110,24 +77,46 @@ const Header = () => {
             </ul>
           ) : (
             <ul className="smallDisplay">
-              <li>
+              <li onClick={handleOnClick}>
                 <Link to="/home">Home</Link>
               </li>
-              <li>
-                {" "}
+              <li onClick={handleOnClick}>
+                {' '}
                 <Link to="/Blog">Blog</Link>
               </li>
-              <li>
+              <li onClick={handleOnClick}>
                 <Link to="/Services">Services</Link>
               </li>
-              <li>
-                {" "}
-                <Link to="/login">login</Link>
-              </li>
-              <li>
-                {" "}
-                <Link to="/Register">Register</Link>
-              </li>
+              {user?.uid ? (
+                <>
+                  <li onClick={handleOnClick}>
+                    <Link to="addServices">Add Service</Link>
+                  </li>
+                  <li onClick={handleOnClick}>
+                    <Link to="AllReviews">All Review</Link>
+                  </li>
+                  <li className="bg-black items-center text-white p-2 max-w-[100px] mx-auto">
+                    <Link
+                      to="/"
+                      onClick={logOutHandler}
+                      className="flex items-center "
+                    >
+                      <BiLogOut className=" mr-3 " /> <span>Logout</span>
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="bg-red-700 text-white p-2">
+                    {' '}
+                    <Link to="/login">Login</Link>
+                  </li>
+                  <li className="bg-black text-white p-2">
+                    {' '}
+                    <Link to="/Register">Register</Link>
+                  </li>
+                </>
+              )}
             </ul>
           )}
           <div className="" onClick={() => setOpenMenu(!openMenu)}>

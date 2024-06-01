@@ -1,11 +1,10 @@
-import React from "react";
+import React from 'react';
 
 const ClientSatisfied = () => {
   return (
-    <div className="px-[10%]">
+    <div className="px-[10%] mt-0 mb-10">
       <section className="p-6 my-6 bg-gray-100 text-gray-800">
         <div className="container grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto sm:grid-cols-2 ">
-
           <div className="flex p-4  rounded-lg bg-white text-gray-800">
             <div className="flex justify-center p-2 align-middle rounded-lg sm:p-4 bg-yellow-700">
               <svg
@@ -20,8 +19,8 @@ const ClientSatisfied = () => {
                 <polygon points="285.757 203.708 306.243 228.292 344 196.827 381.757 228.292 402.243 203.708 344 155.173 285.757 203.708"></polygon>
               </svg>
             </div>
-            <div className="flex flex-col justify-center align-middle">
-              <p className="text-3xl font-semibold leading-none">7500</p>
+            <div className="flex flex-col justify-center align-middle ml-3">
+              <p className="text-3xl font-semibold leading-none mr-2">7500</p>
               <p className="capitalize">New customers</p>
             </div>
           </div>
@@ -41,8 +40,8 @@ const ClientSatisfied = () => {
                 <path d="M297.222,335.1l69.2-144.173-28.85-13.848L268.389,321.214A64.141,64.141,0,1,0,297.222,335.1ZM256,416a32,32,0,1,1,32-32A32.036,32.036,0,0,1,256,416Z"></path>
               </svg>
             </div>
-            <div className="flex flex-col justify-center align-middle">
-              <p className="text-3xl font-semibold leading-none">72%</p>
+            <div className="flex flex-col justify-center align-middle ml-3">
+              <p className="text-3xl font-semibold leading-none mr-2">72%</p>
               <p className="capitalize">Satisfied Client</p>
             </div>
           </div>
@@ -57,8 +56,8 @@ const ClientSatisfied = () => {
                 <path d="M454.423,278.957,328,243.839v-8.185a116,116,0,1,0-104,0V312H199.582l-18.494-22.6a90.414,90.414,0,0,0-126.43-13.367,20.862,20.862,0,0,0-8.026,33.47L215.084,496H472V302.08A24.067,24.067,0,0,0,454.423,278.957ZM192,132a84,84,0,1,1,136,65.9V132a52,52,0,0,0-104,0v65.9A83.866,83.866,0,0,1,192,132ZM440,464H229.3L79.141,297.75a58.438,58.438,0,0,1,77.181,11.91l28.1,34.34H256V132a20,20,0,0,1,40,0V268.161l144,40Z"></path>
               </svg>
             </div>
-            <div className="flex flex-col justify-center align-middle">
-              <p className="text-3xl font-semibold leading-none">87%</p>
+            <div className="flex flex-col justify-center align-middle ml-3">
+              <p className="text-3xl font-semibold leading-none mr-2">87%</p>
               <p className="capitalize">Average Satisfied</p>
             </div>
           </div>

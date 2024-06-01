@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
-import SingleReviews from "../SingleReview/SingleReviews";
+import React, { useEffect, useState } from 'react';
+import SingleReviews from '../SingleReview/SingleReviews';
 const AllReviews = () => {
   const [allRev, setAllRev] = useState([]);
 
   useEffect(() => {
-    fetch("https://legal-aid-server.vercel.app/allReviews")
+    fetch('https://legal-aid-server.vercel.app/allReviews')
       .then(res => res.json())
       .then(data => setAllRev(data));
   }, []);
-  console.log(allRev);
 
   return (
-    <div className="px-[8%]">
+    <div className=" my-10 lg:px-32 md:px-24 px-16 w-full max-w-[1380px] mx-auto">
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           <thead>
@@ -27,7 +26,9 @@ const AllReviews = () => {
             </tr>
           </thead>
           <tbody>
-            {allRev.map((rev, idx) => <SingleReviews key={rev._id} idx= {idx} rev={rev}></SingleReviews>)}
+            {allRev.map((rev, idx) => (
+              <SingleReviews key={rev._id} idx={idx} rev={rev}></SingleReviews>
+            ))}
           </tbody>
         </table>
       </div>

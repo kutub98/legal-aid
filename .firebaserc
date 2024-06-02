@@ -1,19 +1,5 @@
 {
   "projects": {
     "default": "legalaid-13b6d"
-  },
-  "targets": {
-    "legalaid-13b6d": {
-      "hosting": {
-        "LegalAid": [
-          "default"
-        ],
-        "default": [
-          "LegalAid"
-        ]
-      }
-    }
-  },
-  "etags": {},
-  "dataconnectEmulatorConfig": {}
+  }
 }

@@ -63,10 +63,10 @@ const Banner = () => {
             <SingleServices key={sService._id} allService={sService} />
           ))}
         </div>
-        <div className="w-1/2 m-auto bg-slate-200 relative my-6">
+        <div className=" m-auto  relative my-6">
           <Link
             to="/services"
-            className="justify-center w-fit bg-yellow-700 px-4 py-2 text-lg text-white text-center rounded absolute"
+            className="justify-center bg-yellow-700 px-4 py-2 text-lg text-white text-center rounded "
           >
             See All
           </Link>
@@ -179,7 +179,7 @@ const Banner = () => {
             সম্ভব নয়। তাছাড়া আপনি যদি ইতোমধ্যে কোন বিজ্ঞ আইনজীবীর কাছ থেকে সেবা
             নিয়ে থাকেন তবে সে ক্ষেত্রেও আমাদের এই সেবা আপনার জন্য প্রযোজ্য নয়।
           </p>
-          <h5 class="px-2 py-2 bg-yellow-700 w-2/3 shadow-2xl text-white font-semibold">
+          <h5 class="px-2 py-2 bg-yellow-700 lg:w-2/3 md:w-2/3 w-full shadow-2xl text-white font-semibold">
             যেকোন সহায়তা পেতে কল করুন
           </h5>
 
@@ -198,7 +198,7 @@ const Banner = () => {
       </div>
 
       <div className="serviceBox justify-center block bg-yellow-50">
-        <h1 className="text-center text-3xl font-bold my-5 bg-yellow-600 text-white px-2 py-2 w-1/3 m-auto rounded">
+        <h1 className="text-center text-3xl font-bold my-5 bg-yellow-600 text-white px-2 py-2 lg:w-1/3 lg:w-1/3 w-[80%] m-auto rounded">
           Our Service
         </h1>
 
